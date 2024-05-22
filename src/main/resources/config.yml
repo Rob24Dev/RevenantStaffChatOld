@@ -1,0 +1,306 @@
+#    ______                                 _   _____ _         __  __ _____ _           _
+#    | ___ \                               | | /  ___| |       / _|/ _/  __ \ |         | |
+#    | |_/ /_____   _____ _ __   __ _ _ __ | |_\ `--.| |_ __ _| |_| |_| /  \/ |__   __ _| |_
+#    |    // _ \ \ / / _ \ '_ \ / _` | '_ \| __|`--. \ __/ _` |  _|  _| |   | '_ \ / _` | __|
+#    | |\ \  __/\ V /  __/ | | | (_| | | | | |_/\__/ / || (_| | | | | | \__/\ | | | (_| | |_
+#    \_| \_\___| \_/ \___|_| |_|\__,_|_| |_|\__\____/ \__\__,_|_| |_|  \____/_| |_|\__,_|\__|
+#                                   Plugin by Rob24Dev
+# Message placeholders
+# %staffchat_ateamname% - displays the AT member's name in the menu
+# %staffchat_playerdisplayname% - displays the AT member's name and rank in the menu
+# %player% - displays player display name(When editing join leave msg only name)
+# %discord_name% - displays discord player name
+# %chat% - displays the name of the deleted chat
+
+staffchats:
+  developers: true
+  helpers: true
+  builders: true
+
+discordintegration:
+  discord: false
+  token: 'null'
+  staffchatid: ''
+  developerschatid: ''
+  helperschatid: ''
+  builderschatid: ''
+
+Menus:
+  title: '&8[&bAdminTeam Online&8]'
+  size: 54
+  menuenable: true
+  closeitem:
+    enable: true
+    displayname: '&bCloseMenu'
+    material: BARRIER
+    lore:
+      - "&7Click to close &bmenu"
+      - ""
+    slot: 53
+  ateamhead:
+    enable: true
+    displayname: '&b%staffchat_ateamname%'
+    lore:
+      - "&7Rank: &b%staffchat_playerdisplayname%"
+      - ""
+  pane_1:
+    enable: true
+    material: STAINED_GLASS_PANE
+    slot: 45
+  pane_2:
+    enable: true
+    material: STAINED_GLASS_PANE
+    slot: 46
+  pane_3:
+    enable: true
+    material: STAINED_GLASS_PANE
+    slot: 47
+  pane_4:
+    enable: true
+    material: STAINED_GLASS_PANE
+    slot: 48
+  pane_5:
+    enable: true
+    material: STAINED_GLASS_PANE
+    slot: 49
+  pane_6:
+    enable: true
+    material: STAINED_GLASS_PANE
+    slot: 50
+  pane_7:
+    enable: true
+    material: STAINED_GLASS_PANE
+    slot: 51
+  pane_8:
+    enable: true
+    material: STAINED_GLASS_PANE
+    slot: 52
+
+Messages:
+  staffchat:
+    playerwritemessage: '&8[&bStaffChat&8]&b %player% &8» &b'
+    playerwritemessagediscord: '&8[&bStaffChat&8]&b &8Discord &b%discord_name% &8» &b'
+    commands:
+      onlyforplayers: '&8[&bStaffChat&8] &7Only for players'
+      dontpermission: '&8[&bStaffChat&8] &7You dont have permission &brevenantstaffchat.use'
+      alreadytogglemodeon: '&8[&bStaffChat&8] &7You already set toggle mode &bON!'
+      togglemodeon: '&8[&bStaffChat&8] &7You have successfully set the toggle mode &bON!'
+      alreadytogglemodeoff: '&8[&bStaffChat&8] &7You already set toggle mode &bOFF!'
+      togglemodeoff: '&8[&bStaffChat&8] &7You have successfully set the toggle mode &bOFF!'
+    defaultmessage:
+      text:
+        top:
+          - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+          - "&7What do you want to do?"
+        bottom:
+          - ""
+          - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+      Toggle:
+        title: 'Set toggle mode'
+        description: 'If you want to set toggle mode then click on me'
+        color: '&b'
+        italic: true
+        bold: true
+      WriteStaffChat:
+        title: 'I want to write to the staffchat'
+        description: 'If you want to write to an staff chat, type /sc <message>'
+        color: '&b'
+        italic: true
+        bold: true
+      togglemessage:
+        text:
+          top:
+            - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+            - "&7How to set toggle mode?"
+          bottom:
+            - ""
+            - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+      ToggleModeON:
+        title: 'Set toggle mode ON'
+        description: 'Click if you want to set toggle mode to ON!'
+        color: '&b'
+        italic: true
+        bold: true
+      ToggleModeOFF:
+        title: 'Set toggle mode OFF'
+        description: 'Click if you want to set toggle mode to OFF!'
+        color: '&b'
+        italic: true
+        bold: true
+  helperchat:
+    playerwritemessage: '&8[&bHelperChat&8]&b %player% &8» &b'
+    playerwritemessagediscord: '&8[&bHelperChat&8]&b &8Discord &b%discord_name% &8» &b'
+    blocked: '&8[&bHelperChat&8] &7HelperChat is &bblocked'
+    commands:
+      onlyforplayers: '&8[&bHelperChat&8] &7Only for players'
+      dontpermission: '&8[&bHelperChat&8] &7You dont have permission &brevenantstaffchat.helpers.use'
+      alreadytogglemodeon: '&8[&bHelperChat&8] &7You already set toggle mode &bON!'
+      togglemodeon: '&8[&bHelperChat&8] &7You have successfully set the toggle mode &bON!'
+      alreadytogglemodeoff: '&8[&bHelperChat&8] &7You already set toggle mode &bOFF!'
+      togglemodeoff: '&8[&bHelperChat&8] &7You have successfully set the toggle mode &bOFF!'
+    defaultmessage:
+      text:
+        top:
+          - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+          - "&7What do you want to do?"
+        bottom:
+          - ""
+          - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+      Toggle:
+        title: 'Set toggle mode'
+        description: 'If you want to set toggle mode then click on me'
+        color: '&b'
+        italic: true
+        bold: true
+      WriteStaffChat:
+        title: 'I want to write to the helperchat'
+        description: 'If you want to write to an staff chat, type /hc <message>'
+        color: '&b'
+        italic: true
+        bold: true
+      togglemessage:
+        text:
+          top:
+            - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+            - "&7How to set toggle mode?"
+          bottom:
+            - ""
+            - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+      ToggleModeON:
+        title: 'Set toggle mode ON'
+        description: 'Click if you want to set toggle mode to ON!'
+        color: '&b'
+        italic: true
+        bold: true
+      ToggleModeOFF:
+        title: 'Set toggle mode OFF'
+        description: 'Click if you want to set toggle mode to OFF!'
+        color: '&b'
+        italic: true
+        bold: true
+  developerchat:
+    playerwritemessage: '&8[&bDeveloperChat&8]&b %player% &8» &b'
+    playerwritemessagediscord: '&8[&bDeveloperChat&8]&b &8Discord &b%discord_name% &8» &b'
+    blocked: '&8[&bDeveloperChat&8] &7DevelopersChat is &bblocked'
+    commands:
+      onlyforplayers: '&8[&bDeveloperChat&8] &7Only for players'
+      dontpermission: '&8[&bDeveloperChat&8] &7You dont have permission &brevenantstaffchat.developers.use'
+      alreadytogglemodeon: '&8[&bDeveloperChat&8] &7You already set toggle mode &bON!'
+      togglemodeon: '&8[&bDeveloperChat&8] &7You have successfully set the toggle mode &bON!'
+      alreadytogglemodeoff: '&8[&bDeveloperChat&8] &7You already set toggle mode &bOFF!'
+      togglemodeoff: '&8[&bDeveloperChat&8] &7You have successfully set the toggle mode &bOFF!'
+    defaultmessage:
+      text:
+        top:
+          - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+          - "&7What do you want to do?"
+        bottom:
+          - ""
+          - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+      Toggle:
+        title: 'Set toggle mode'
+        description: 'If you want to set toggle mode then click on me'
+        color: '&b'
+        italic: true
+        bold: true
+      WriteStaffChat:
+        title: 'I want to write to the developerchat'
+        description: 'If you want to write to an staff chat, type /dc <message>'
+        color: '&b'
+        italic: true
+        bold: true
+      togglemessage:
+        text:
+          top:
+            - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+            - "&7How to set toggle mode?"
+          bottom:
+            - ""
+            - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+      ToggleModeON:
+        title: 'Set toggle mode ON'
+        description: 'Click if you want to set toggle mode to ON!'
+        color: '&b'
+        italic: true
+        bold: true
+      ToggleModeOFF:
+        title: 'Set toggle mode OFF'
+        description: 'Click if you want to set toggle mode to OFF!'
+        color: '&b'
+        italic: true
+        bold: true
+  builderchat:
+    playerwritemessage: '&8[&bBuilderChat&8]&b %player% &8» &b'
+    playerwritemessagediscord: '&8[&bBuilderChat&8]&b &8Discord &b%discord_name% &8» &b'
+    blocked: '&8[&bBuilderChat&8] &7BuilderChat is &bblocked'
+    commands:
+      onlyforplayers: '&8[&bBuilderChat&8] &7Only for players'
+      dontpermission: '&8[&bBuilderChat&8] &7You dont have permission &brevenantstaffchat.builders.use'
+      alreadytogglemodeon: '&8[&bBuilderChat&8] &7You already set toggle mode &bON!'
+      togglemodeon: '&8[&bBuilderChat&8] &7You have successfully set the toggle mode &bON!'
+      alreadytogglemodeoff: '&8[&bBuilderChat&8] &7You already set toggle mode &bOFF!'
+      togglemodeoff: '&8[&bBuilderChat&8] &7You have successfully set the toggle mode &bOFF!'
+    defaultmessage:
+      text:
+        top:
+          - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+          - "&7What do you want to do?"
+        bottom:
+          - ""
+          - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+      Toggle:
+        title: 'Set toggle mode'
+        description: 'If you want to set toggle mode then click on me'
+        color: '&b'
+        italic: true
+        bold: true
+      WriteStaffChat:
+        title: 'I want to write to the builderchat'
+        description: 'If you want to write to an staff chat, type /bc <message>'
+        color: '&b'
+        italic: true
+        bold: true
+      togglemessage:
+        text:
+          top:
+            - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+            - "&7How to set toggle mode?"
+          bottom:
+            - ""
+            - "&b▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉"
+      ToggleModeON:
+        title: 'Set toggle mode ON'
+        description: 'Click if you want to set toggle mode to ON!'
+        color: '&b'
+        italic: true
+        bold: true
+      ToggleModeOFF:
+        title: 'Set toggle mode OFF'
+        description: 'Click if you want to set toggle mode to OFF!'
+        color: '&b'
+        italic: true
+        bold: true
+  player:
+    join: '&8[&bStaffChat&8] &7Player &b%player% &7has &bjoined'
+    leave: '&8[&bStaffChat&8] &7Player &b%player% &7has &bdisconnected'
+  discord:
+    joindiscord: '[StaffChat] Player **%player%** has joined'
+    leavediscord: '[StaffChat] Player **%player%** has disconnected'
+    staffchatwrite: '[StaffChat] **%player%** » '
+    helperchatwrite: '[HelperChat] **%player%** » '
+    developerchatwrite: '[DeveloperChat] **%player%** » '
+    builderchatwrite: '[BuilderChat] **%player%** » '
+  commands:
+    main:
+      dontpermission: '&8[&bRevenantStaffChat&8] &7You dont have permission &brevenantstaffchat.admin.main'
+    reload:
+      reloadmessage: '&8[&bRevenantStaffChat&8] &7The plugin has been &bsuccessfully reloaded'
+      dontpermission: '&8[&bRevenantStaffChat&8] &7You dont have permission &brevenantstaffchat.admin.reload'
+    clearlog:
+      dontpermission: '&8[&bRevenantStaffChat&8] &7You dont have permission &brevenantstaffchat.admin.clearlog'
+      use: '&8[&bRevenantStaffChat&8] &7Please use &b/sca clearlog <chat name/all>'
+      successfully: '&8[&bRevenantStaffChat&8] &7Chat &b%chat% &7has been successfully clear!'
+      chatslist: '&8[&bRevenantStaffChat&8] &7all,scchat,hcchat,bcchat,dcchat'
+    createcommand:
+      dontpermission: '&8[&bRevenantStaffChat&8] &7You dont have permission &brevenantstaffchat.commands.create'
+      use: '&8[&bRevenantStaffChat&8] &7Please use &b/sca createcommand <name>'

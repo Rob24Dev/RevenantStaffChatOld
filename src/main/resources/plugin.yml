@@ -1,0 +1,18 @@
+name: RevenantStaffCH
+version: 1.4
+main: rob24Dev.revenantstaffchat.Main
+authors: [ Rob24Dev ]
+api-version: 1.13
+commands:
+  sc:
+    description: Staffchat Command
+  hc:
+    description: Helper Chat Command
+  dc:
+    description: Developer Chat Command
+  bc:
+    description: Builder Chat Command
+  sca:
+    description: Admin Commands
+  ateam:
+    description: Admin Team List Command
